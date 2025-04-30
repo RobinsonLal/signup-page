@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    background-image: url(./assets/nasa-Q1p7bh3SHj8-unsplash.jpg);
+    background-size: cover;
+}
+
+:root{
+    --primary-color: white;
+    --secondary-color: #fdffb6;
+    --primary-text: 3rem;
+    --secondary-text: 1.1rem;
+    --primary-button-color: #1f71a3;
+    --secondary-button-color: #005684;
+}
+
+.outerbox{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerbox{
+    width: 28%;
+    border-radius: 10px;
+    padding: 30px 40px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+h2{
+    font-size: var(--primary-text);
+    text-align: center;
+    color: var(--primary-color);
+}
+
+p{
+    margin-top: 20px;
+    color: var(--primary-color);
+    font-size: var(--secondary-text);
+}
+
+input{
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 8px 0px;
+    outline: none;
+    background: none;
+    color: var(--primary-color);
+}
+
+input::placeholder{
+    color: rgb(180, 180, 180);
+}
+
+#submit{
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-button-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: var(--secondary-button-color);
+}
+
+footer p{
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+footer p a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Adding responsivesness to the webpage using media queries */
+
+@media (max-width: 640px){
+    .innerbox{
+        width: 80%;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 768px){
+    .innerbox{
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .innerbox{
+        width: 65%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px){
+    .innerbox{
+        width: 28%;
+    }
+}
